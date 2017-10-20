@@ -18,9 +18,9 @@ install:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cd oshc/
-  - flake8 ./main/*.py ./oshrc/*.py
   - python manage.py migrate --noinput
   - python manage.py collectstatic --noinput
+  - "flake8 ."
 
 script:
   - coverage run --source='main' manage.py test --verbosity 2
