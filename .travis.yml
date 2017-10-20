@@ -20,10 +20,10 @@ before_script:
   - cd oshc/
   - python manage.py migrate --noinput
   - python manage.py collectstatic --noinput
-  - "flake8 ."
 
 script:
   - coverage run --source='main' manage.py test --verbosity 2
+  - flake8 .
 
 after_success:
   - coverage report
