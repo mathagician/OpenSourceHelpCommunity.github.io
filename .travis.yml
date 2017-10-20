@@ -23,6 +23,7 @@ before_script:
 
 script:
   - coverage run --source='main' manage.py test --verbosity 2
+  - flake8 --ignore E226,E302,E41,F401,E402 .
 
 after_success:
   - coverage report
