@@ -145,7 +145,7 @@ a {
 .sRegister a {
   color: white;
   text-decoration: none;
-}
+};
 
 .left-social-section {
   padding: 0 50px;
@@ -160,6 +160,9 @@ iframe {
   border: 0;
 }
 
+.contest-submission-message {
+  margin-top: 15%;
+}
 
 /*   FOOTER CSS STARTS  */
 
